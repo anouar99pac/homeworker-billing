@@ -1,0 +1,40 @@
+<div class="page-container">
+    <div class="container">
+        <div class="row">
+            <table mat-table [dataSource]="dicResults" class="mat-elevation-z8">
+                <ng-container matColumnDef="word">
+                    <th mat-header-cell *matHeaderCellDef> Mot </th>
+                    <td mat-cell *matCellDef="let element"> {{element.word}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="meaning">
+                    <th mat-header-cell *matHeaderCellDef> Définition </th>
+                    <td mat-cell *matCellDef="let element"> {{element.meaning}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+        <br/>
+        <hr/>
+        <div class="row">
+            <table mat-table [dataSource]="dicAbreviations" class="mat-elevation-z8">
+                <ng-container matColumnDef="word">
+                    <th mat-header-cell *matHeaderCellDef> Mot </th>
+                    <td mat-cell *matCellDef="let element"> {{element.word}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="meaning">
+                    <th mat-header-cell *matHeaderCellDef> Définition </th>
+                    <td mat-cell *matCellDef="let element"> {{element.meaning}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="page-container">
+    <div class="container">
+        <div class="row">
+            <form class="basic-form col-12" [formGroup]="handlePricingForm" (submit)="onSubmit()">
+                <div class="basic-form-group">
+                    <mat-form-field class="basic-input-full">
+                        <input matInput leaseUpperCaseInput placeholder="Prix de l'intervenant" formControlName="price">
+                        <span matSuffix>&nbsp;€</span>
+                        <mat-error *ngIf="!handlePricingForm.get('price').valid && handlePricingForm.get('price').touched">
+                            <span>Champ invalide</span>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="basic-form-group">
+                    <mat-checkbox matInput formControlName="withoutCharges" color="primary" class="text-dark-gray">Les charges sociales sont à la charge de l'intervenant
+                    </mat-checkbox>
+                    <small class="charge-description">(AE / micro entreprise)</small>
+                </div>
+                <br/><br/>
+                <div class="basic-form-group button-row">
+                    <div mat-dialog-actions>
+                        <div style="display:flex;">
+                            <button mat-raised-button type="submit" color="primary" class="mat-elevation-z col-12" [disabled]="! handlePricingForm.valid || isSubmitted">Lancer le calcul</button>
+                            <span *ngIf="isSubmitted" style="margin-top: 8px; margin-left: 5px;">
+                            <mat-spinner diameter="25"></mat-spinner>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <br/>
+        <hr/>
+        <div class="row">
+
+        </div>
+    </div>
+</div>
