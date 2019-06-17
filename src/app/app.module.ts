@@ -15,6 +15,7 @@ import { AnnexesComponent } from './features/annexes/annexes.component';
 import { SettingsComponent } from './features/settings/settings.component';
 import { PriceComponent } from './components/price/price.component';
 import { ProfilingComponent } from './features/profiling/profiling.component';
+import { ContactComponent } from './features/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProfilingComponent } from './features/profiling/profiling.component';
     AnnexesComponent,
     SettingsComponent,
     PriceComponent,
-    ProfilingComponent
+    ProfilingComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
