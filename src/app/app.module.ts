@@ -13,6 +13,7 @@ import { HomeComponent } from './features/home/home.component';
 import { PriceBuilderService } from './core/services/price-builder.service';
 import { AnnexesComponent } from './features/annexes/annexes.component';
 import { SettingsComponent } from './features/settings/settings.component';
+import { PriceComponent } from './components/price/price.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SettingsComponent } from './features/settings/settings.component';
     LayoutComponent,
     HomeComponent,
     AnnexesComponent,
-    SettingsComponent
+    SettingsComponent,
+    PriceComponent
   ],
   imports: [
     BrowserModule,

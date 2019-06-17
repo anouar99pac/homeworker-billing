@@ -4,7 +4,7 @@
             <form class="basic-form col-12" [formGroup]="handlePricingForm" (submit)="onSubmit()">
                 <div class="basic-form-group">
                     <mat-form-field class="basic-input-full">
-                        <input matInput leaseUpperCaseInput placeholder="Prix de l'intervenant" formControlName="price">
+                        <input matInput autocomplete="off" leaseUpperCaseInput placeholder="Prix de l'intervenant" formControlName="price">
                         <span matSuffix>&nbsp;€</span>
                         <mat-error *ngIf="!handlePricingForm.get('price').valid && handlePricingForm.get('price').touched">
                             <span>Champ invalide</span>
@@ -34,7 +34,7 @@
         <br/>
         <hr/>
         <div class="row">
-
+            <app-price *ngIf="isComputed" [netPrice]="netPrice" [dataGridResults]="gridResult"></app-price>
         </div>
     </div>
 </div>

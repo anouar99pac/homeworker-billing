@@ -15,7 +15,7 @@ export class SettingsService {
     return confs;
   }
 
-  gettingCases() {
+  get gettingCases() {
     const cases = {
       black: {
         csInt: 0,

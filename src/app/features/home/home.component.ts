@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { PriceBuilderService } from './../../core/services/price-builder.service';
 import { regex } from 'src/app/shared/constants/regex';
 
 @Component({
@@ -10,8 +11,11 @@ import { regex } from 'src/app/shared/constants/regex';
 export class HomeComponent implements OnInit {
   handlePricingForm: FormGroup;
   isSubmitted = false;
+  isComputed = false;
+  netPrice = null;
+  gridResult = [];
 
-  constructor(private _fb: FormBuilder) {
+  constructor(private _fb: FormBuilder, private _priceBuilder: PriceBuilderService) {
     this.createForm();
    }
 
@@ -26,6 +30,16 @@ export class HomeComponent implements OnInit {
   }
 
   onSubmit() {
+    this.isSubmitted = true;
+    setTimeout(() => {
+      this.isSubmitted = false;
+      this.isComputed = true;
+    }, 3000);
+    const price = this.handlePricingForm.value.price;
+    const option = this.handlePricingForm.value.withoutCharges;
+    this.netPrice = this._priceBuilder.computeNetPrice(price, option);
+    this.gridResult = this._priceBuilder.computeResult(this.netPrice);
+    return;
 
   }
 }
