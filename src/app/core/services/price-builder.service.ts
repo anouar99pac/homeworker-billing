@@ -33,15 +33,15 @@ export class PriceBuilderService {
     // TODO FIXME
     const vars = this.cases[type];
     const r = {csInt: 0, intTotal: 0, rIR: 0, remu: 0, IR: 0, cs: 0, rIS: 0, cout: 0};
-    r.csInt = prix * vars.csInt - vars.rCsIntFixed;
-    r.intTotal = prix + r.csInt;
-    r.rIR = prix * vars.rIRPrix + r.csInt * vars.rIRCS;
-    r.remu = (prix * vars.direct + r.csInt - r.rIR) / (1 - this.TMI);
-    r.IR = r.remu * this.TMI;
-    r.cs = r.remu * 0.45;
-    const _var = Number(!vars.direct);
-    r.rIS = (prix * _var + r.remu + r.cs) * 0.28 + prix * vars.creditIS;
-    r.cout = r.remu + r.cs - r.rIS + prix * _var;
+    r.csInt = this.decimals(prix * vars.csInt - vars.rCsIntFixed);
+    r.intTotal = this.decimals(prix + r.csInt);
+    r.rIR = this.decimals(prix * vars.rIRPrix + r.csInt * vars.rIRCS);
+    r.remu = this.decimals((prix * vars.direct + r.csInt - r.rIR) / (1 - this.TMI));
+    r.IR = this.decimals(r.remu * this.TMI);
+    r.cs = this.decimals(r.remu * 0.45);
+    const _var = this.decimals(Number(!vars.direct));
+    r.rIS = this.decimals((prix * _var + r.remu + r.cs) * 0.28 + prix * vars.creditIS);
+    r.cout = this.decimals(r.remu + r.cs - r.rIS + prix * _var);
     return r;
   }
 

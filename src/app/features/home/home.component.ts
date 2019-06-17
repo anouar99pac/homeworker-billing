@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.isSubmitted = false;
       this.isComputed = true;
-    }, 3000);
+    }, 2000);
     const price = this.handlePricingForm.value.price;
     const option = this.handlePricingForm.value.withoutCharges;
     this.netPrice = this._priceBuilder.computeNetPrice(price, option);
