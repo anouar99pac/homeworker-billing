@@ -19,6 +19,15 @@ Grace à cette application, vous pourrez comparer plusieurs cas possibles et ell
 
 Lien pour la DEMO:
 
+![pricing_intervenat](https://user-images.githubusercontent.com/12816334/59857071-72a0a500-9378-11e9-97e3-98f3a879726c.png)
+
+#### Exemple: 
+
+Un intervenant qui vous demande 30 euros par session, les charges sociales sont à la charge de l'employeur.
+Le coût moins chers c'est de prendre des tickets SECU  Préfinancés.
+
+
+
 https://anouar99pac.github.io/homeworker-billing/
 
 ## Technique
