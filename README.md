@@ -19,6 +19,11 @@ Grace à cette application, vous pourrez comparer plusieurs cas possibles et ell
 
 Lien pour la DEMO:
 
+#### Lien de l'application: [homeworker-billing](https://anouar99pac.github.io/homeworker-billing/) 
+à vous de jouer Monsieurs Dames.
+
+**Interface***
+
 ![pricing_intervenat](https://user-images.githubusercontent.com/12816334/59857071-72a0a500-9378-11e9-97e3-98f3a879726c.png)
 
 #### Exemple: 
@@ -28,8 +33,7 @@ Le coût moins chers c'est de prendre des tickets SECU  Préfinancés.
 
 ![dictionnaire](https://user-images.githubusercontent.com/12816334/59859032-530b7b80-937c-11e9-9c28-c46a70c16332.png)
 
-Lien de l'application: [homeworker-billing](https://anouar99pac.github.io/homeworker-billing/) 
-à vous de jouer Monsieurs Dames.
+
 
 ## Technique
 
@@ -46,22 +50,13 @@ ng serve
 
 Vous aurez besoin de voir dans l'onget Glossaire dans le menu à gauche, la définition de chaque abréviation dans le tableau du résultat.
 
-- `black` correspond au black, ou bien si vous réglez sans aucun avantage une rémunération nette (par exemple pour un intervenant intermittent du spectacle)
-- `AE` correspond à un règlement pour un auto/microentrepreneur. Celui-ci paye lui-même ses charges.
-- `AE-SAP` correspond à un règlement pour un auto/microentrepreneur ayant un agrément « service à la personne ». Celui-ci paye lui-même ses charges.
-- `CESU` correspond à un règlement avec un CESU déclaratif (ou bancaire).
-- `CESU-pre` correspond à un règlement avec un CESU préfinancé par une entreprise.
-- `CESU-pre-post` correspond à un règlement avec un CESU préfinancé par une entreprise, mais après avoir passé le plafond d'abattement de charges sociales de 1 830 € / an.
+Les types de paiements sont:
+
+![types_paiements](https://user-images.githubusercontent.com/12816334/59865119-8fdd6f80-9388-11e9-85f4-b20b5f72ba22.png)
 
 Les colonnes sont :
-- `csInt` : charges sociales de l'intervenant
-- `intTotal` : prix charges de l'intervenant comprises
-- `rIR` : la réduction d'IR
-- `remu` : ce qu'il faut se rémunérer
-- `IR` : l'IR à payer
-- `cs` : les charges sociales à régler sur votre rémunération
-- `rIS` : la réduction d'IS
-- `cout` : le cout final pour votre entreprise (0 = le fait de ne pas prendre d'intervenant du tout)
+
+![mots_clés](https://user-images.githubusercontent.com/12816334/59865116-8e13ac00-9388-11e9-8a41-f8111b69e411.png)
 
 ## Important
 
@@ -73,3 +68,4 @@ Le paramétrage par défaut prend en compte :
 Les règles de calcul et taux utilisés sont ceux applicables à l'année 2016 (charges sociales des différents statuts, réductions fiscales, …).
 
 Vous allez pouvoir modifier ces deux paramètres dans une future version en fonction de statut. 
+
