@@ -23,12 +23,13 @@ Lien pour la DEMO:
 
 #### Exemple: 
 
-Un intervenant qui vous demande 30 euros par session, les charges sociales sont à la charge de l'employeur.
+Un intervenant qui vous demande 30 euros par session, les charges sociales sont à votre charge.
 Le coût moins chers c'est de prendre des tickets SECU  Préfinancés.
 
+![dictionnaire](https://user-images.githubusercontent.com/12816334/59859032-530b7b80-937c-11e9-9c28-c46a70c16332.png)
 
-
-https://anouar99pac.github.io/homeworker-billing/
+Lien de l'application: [homeworker-billing](https://anouar99pac.github.io/homeworker-billing/) 
+à vous de jouer Monsieurs Dames.
 
 ## Technique
 
