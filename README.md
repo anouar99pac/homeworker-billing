@@ -17,8 +17,6 @@ Grace à cette application, vous pourrez comparer plusieurs cas possibles et ell
 
 ## DEMO
 
-Lien pour la DEMO:
-
 #### Lien de l'application: [homeworker-billing](https://anouar99pac.github.io/homeworker-billing/) 
 à vous de jouer Monsieurs Dames.
 
