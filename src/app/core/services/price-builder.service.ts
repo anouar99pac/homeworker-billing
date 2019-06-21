@@ -10,13 +10,13 @@ export class PriceBuilderService {
   netPrice: number = null;
   TMI = 0.3;
   cases;
-  finalResult = {black: 0, };
   // TODO we set each settings
   constructor(private _settingsService: SettingsService) {
     this.cases = this._settingsService.gettingCases;
   }
 
   computeNetPrice(prix: number, withoutCharges: boolean): number {
+      // FIXME est ce l'intervenant à toujours des charges de 22 % or 23
       this.netPrice = withoutCharges ? prix * (1 - 0.233) : prix;
       this.netPrice = this.decimals(this.netPrice);
       return this.netPrice;
